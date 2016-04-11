@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>jQuery Boilerplate</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="../src/openClosedUpdate.js"></script>
+
+	<style>
+		h2 {
+			font-family: sans-serif;
+			font-size: 14px;
+			font-weight: 400;
+			color: gray;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h2 class="OpenClosed"></h2>
+
+	<!--Place the following <script> tag and its contents into the html document.-->
+	<script>
+		$(function () {
+			$(document).ready(function () {
+				$('.OpenClosed').openClosedUpdate({
+					//Customize Weekly Hours: [Opening time, Closing time] OR ["Closed"]
+					//NOTE: The code can accomidate several time variations, but please make sure you indicate "am" or "pm".
+					Sunday: ["Closed"],
+					Monday: ["9am", "5:00pm"],
+					Tuesday: ["9am", "5:00pm"],
+					Wednesday: ["9am", "5:00pm"],
+					Thursday: ["9am", "5:00pm"],
+					Friday: ["9am", "5:00pm"],
+					Saturday: ["10:30am", "5:00pm"],
+
+					//Customize Statuses
+					openStatus: "We are open until ",
+					openSoonStatus: "Today we will be opening at ",
+					closedTodayStatus: "Wendy's Wallpaper is closed today.",
+					closedStatus: "We are currently closed for the day. Visit us again later!",
+
+
+					//Customize Holiday Hours: 
+					//[Month, Day], [Opening time, Closing time] OR ["Closed"], 
+					//You can customize up to 10 holidays
+					//Customize Optional Holiday Message
+					//Example:
+					//holiday1: [[12, 25], ["Closed"]],
+					//holiday1Message: "We hope you have a very, very merry Christmas",
+					holiday1: [[4, 11], ["Closed"]],
+					holiday1Message: "We hope you have a very, very merry Christmas",
+					holiday2: "",
+					holiday2Message: "",
+					holiday3: "",
+					holiday3Message: "",
+					holiday4: "",
+					holiday4Message: "",
+					holiday5: "",
+					holiday5Message: "",
+					holiday6: "",
+					holiday6Message: "",
+					holiday7: "",
+					holiday7Message: "",
+					holiday8: "",
+					holiday8Message: "",
+					holiday9: "",
+					holiday9Message: "",
+					holiday10: "",
+					holiday10Message: "",
+				});
+
+			});
+		});
+	</script>
+
+</body>
+
+</html>
